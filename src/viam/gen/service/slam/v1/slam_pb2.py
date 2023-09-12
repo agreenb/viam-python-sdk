@@ -1,7 +1,8 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 from ....common.v1 import common_pb2 as common_dot_v1_dot_common__pb2
@@ -9,8 +10,31 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1aservice/slam/v1/slam.proto\x12\x14viam.service.slam.v1\x1a\x16common/v1/common.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto"(\n\x12GetPositionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name"\x9f\x01\n\x13GetPositionResponse\x12(\n\x04pose\x18\x01 \x01(\x0b2\x14.viam.common.v1.PoseR\x04pose\x12/\n\x13component_reference\x18\x02 \x01(\tR\x12componentReference\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"-\n\x17GetPointCloudMapRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name"M\n\x18GetPointCloudMapResponse\x121\n\x15point_cloud_pcd_chunk\x18\x01 \x01(\x0cR\x12pointCloudPcdChunk"-\n\x17GetInternalStateRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name"L\n\x18GetInternalStateResponse\x120\n\x14internal_state_chunk\x18\x01 \x01(\x0cR\x12internalStateChunk"-\n\x17GetLatestMapInfoRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name"^\n\x18GetLatestMapInfoResponse\x12B\n\x0flast_map_update\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampR\rlastMapUpdate2\xbc\x06\n\x0bSLAMService\x12\x95\x01\n\x0bGetPosition\x12(.viam.service.slam.v1.GetPositionRequest\x1a).viam.service.slam.v1.GetPositionResponse"1\x82\xd3\xe4\x93\x02+\x12)/viam/api/v1/service/slam/{name}/position\x12\xad\x01\n\x10GetPointCloudMap\x12-.viam.service.slam.v1.GetPointCloudMapRequest\x1a..viam.service.slam.v1.GetPointCloudMapResponse"8\x82\xd3\xe4\x93\x022\x120/viam/api/v1/service/slam/{name}/point_cloud_map0\x01\x12\xac\x01\n\x10GetInternalState\x12-.viam.service.slam.v1.GetInternalStateRequest\x1a..viam.service.slam.v1.GetInternalStateResponse"7\x82\xd3\xe4\x93\x021\x12//viam/api/v1/service/slam/{name}/internal_state0\x01\x12\xad\x01\n\x10GetLatestMapInfo\x12-.viam.service.slam.v1.GetLatestMapInfoRequest\x1a..viam.service.slam.v1.GetLatestMapInfoResponse":\x82\xd3\xe4\x93\x024\x122/viam/api/v1/component/slam/{name}/latest_map_info\x12\x85\x01\n\tDoCommand\x12 .viam.common.v1.DoCommandRequest\x1a!.viam.common.v1.DoCommandResponse"3\x82\xd3\xe4\x93\x02-"+/viam/api/v1/service/slam/{name}/do_commandB;\n\x18com.viam.service.slam.v1Z\x1fgo.viam.com/api/service/slam/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'service.slam.v1.slam_pb2', globals())
+_GETPOSITIONREQUEST = DESCRIPTOR.message_types_by_name['GetPositionRequest']
+_GETPOSITIONRESPONSE = DESCRIPTOR.message_types_by_name['GetPositionResponse']
+_GETPOINTCLOUDMAPREQUEST = DESCRIPTOR.message_types_by_name['GetPointCloudMapRequest']
+_GETPOINTCLOUDMAPRESPONSE = DESCRIPTOR.message_types_by_name['GetPointCloudMapResponse']
+_GETINTERNALSTATEREQUEST = DESCRIPTOR.message_types_by_name['GetInternalStateRequest']
+_GETINTERNALSTATERESPONSE = DESCRIPTOR.message_types_by_name['GetInternalStateResponse']
+_GETLATESTMAPINFOREQUEST = DESCRIPTOR.message_types_by_name['GetLatestMapInfoRequest']
+_GETLATESTMAPINFORESPONSE = DESCRIPTOR.message_types_by_name['GetLatestMapInfoResponse']
+GetPositionRequest = _reflection.GeneratedProtocolMessageType('GetPositionRequest', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONREQUEST, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetPositionRequest)
+GetPositionResponse = _reflection.GeneratedProtocolMessageType('GetPositionResponse', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONRESPONSE, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetPositionResponse)
+GetPointCloudMapRequest = _reflection.GeneratedProtocolMessageType('GetPointCloudMapRequest', (_message.Message,), {'DESCRIPTOR': _GETPOINTCLOUDMAPREQUEST, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetPointCloudMapRequest)
+GetPointCloudMapResponse = _reflection.GeneratedProtocolMessageType('GetPointCloudMapResponse', (_message.Message,), {'DESCRIPTOR': _GETPOINTCLOUDMAPRESPONSE, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetPointCloudMapResponse)
+GetInternalStateRequest = _reflection.GeneratedProtocolMessageType('GetInternalStateRequest', (_message.Message,), {'DESCRIPTOR': _GETINTERNALSTATEREQUEST, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetInternalStateRequest)
+GetInternalStateResponse = _reflection.GeneratedProtocolMessageType('GetInternalStateResponse', (_message.Message,), {'DESCRIPTOR': _GETINTERNALSTATERESPONSE, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetInternalStateResponse)
+GetLatestMapInfoRequest = _reflection.GeneratedProtocolMessageType('GetLatestMapInfoRequest', (_message.Message,), {'DESCRIPTOR': _GETLATESTMAPINFOREQUEST, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetLatestMapInfoRequest)
+GetLatestMapInfoResponse = _reflection.GeneratedProtocolMessageType('GetLatestMapInfoResponse', (_message.Message,), {'DESCRIPTOR': _GETLATESTMAPINFORESPONSE, '__module__': 'service.slam.v1.slam_pb2'})
+_sym_db.RegisterMessage(GetLatestMapInfoResponse)
+_SLAMSERVICE = DESCRIPTOR.services_by_name['SLAMService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'\n\x18com.viam.service.slam.v1Z\x1fgo.viam.com/api/service/slam/v1'

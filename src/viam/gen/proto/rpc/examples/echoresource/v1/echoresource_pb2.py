@@ -1,12 +1,30 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5proto/rpc/examples/echoresource/v1/echoresource.proto\x12"proto.rpc.examples.echoresource.v1"C\n\x13EchoResourceRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message"0\n\x14EchoResourceResponse\x12\x18\n\x07message\x18\x01 \x01(\tR\x07message"K\n\x1bEchoResourceMultipleRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message"8\n\x1cEchoResourceMultipleResponse\x12\x18\n\x07message\x18\x01 \x01(\tR\x07message"G\n\x17EchoResourceBiDiRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message"4\n\x18EchoResourceBiDiResponse\x12\x18\n\x07message\x18\x01 \x01(\tR\x07message2\xd1\x03\n\x13EchoResourceService\x12\x83\x01\n\x0cEchoResource\x127.proto.rpc.examples.echoresource.v1.EchoResourceRequest\x1a8.proto.rpc.examples.echoresource.v1.EchoResourceResponse"\x00\x12\x9d\x01\n\x14EchoResourceMultiple\x12?.proto.rpc.examples.echoresource.v1.EchoResourceMultipleRequest\x1a@.proto.rpc.examples.echoresource.v1.EchoResourceMultipleResponse"\x000\x01\x12\x93\x01\n\x10EchoResourceBiDi\x12;.proto.rpc.examples.echoresource.v1.EchoResourceBiDiRequest\x1a<.proto.rpc.examples.echoresource.v1.EchoResourceBiDiResponse"\x00(\x010\x01B6Z4go.viam.com/utils/proto/rpc/examples/echoresource/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'proto.rpc.examples.echoresource.v1.echoresource_pb2', globals())
+_ECHORESOURCEREQUEST = DESCRIPTOR.message_types_by_name['EchoResourceRequest']
+_ECHORESOURCERESPONSE = DESCRIPTOR.message_types_by_name['EchoResourceResponse']
+_ECHORESOURCEMULTIPLEREQUEST = DESCRIPTOR.message_types_by_name['EchoResourceMultipleRequest']
+_ECHORESOURCEMULTIPLERESPONSE = DESCRIPTOR.message_types_by_name['EchoResourceMultipleResponse']
+_ECHORESOURCEBIDIREQUEST = DESCRIPTOR.message_types_by_name['EchoResourceBiDiRequest']
+_ECHORESOURCEBIDIRESPONSE = DESCRIPTOR.message_types_by_name['EchoResourceBiDiResponse']
+EchoResourceRequest = _reflection.GeneratedProtocolMessageType('EchoResourceRequest', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCEREQUEST, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceRequest)
+EchoResourceResponse = _reflection.GeneratedProtocolMessageType('EchoResourceResponse', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCERESPONSE, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceResponse)
+EchoResourceMultipleRequest = _reflection.GeneratedProtocolMessageType('EchoResourceMultipleRequest', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCEMULTIPLEREQUEST, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceMultipleRequest)
+EchoResourceMultipleResponse = _reflection.GeneratedProtocolMessageType('EchoResourceMultipleResponse', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCEMULTIPLERESPONSE, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceMultipleResponse)
+EchoResourceBiDiRequest = _reflection.GeneratedProtocolMessageType('EchoResourceBiDiRequest', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCEBIDIREQUEST, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceBiDiRequest)
+EchoResourceBiDiResponse = _reflection.GeneratedProtocolMessageType('EchoResourceBiDiResponse', (_message.Message,), {'DESCRIPTOR': _ECHORESOURCEBIDIRESPONSE, '__module__': 'proto.rpc.examples.echoresource.v1.echoresource_pb2'})
+_sym_db.RegisterMessage(EchoResourceBiDiResponse)
+_ECHORESOURCESERVICE = DESCRIPTOR.services_by_name['EchoResourceService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'Z4go.viam.com/utils/proto/rpc/examples/echoresource/v1'

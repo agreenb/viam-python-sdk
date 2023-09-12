@@ -1,15 +1,54 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 from ....common.v1 import common_pb2 as common_dot_v1_dot_common__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n component/gantry/v1/gantry.proto\x12\x18viam.component.gantry.v1\x1a\x16common/v1/common.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1cgoogle/protobuf/struct.proto"W\n\x12GetPositionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"8\n\x13GetPositionResponse\x12!\n\x0cpositions_mm\x18\x01 \x03(\x01R\x0bpositionsMm"\xa8\x01\n\x15MoveToPositionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12!\n\x0cpositions_mm\x18\x02 \x03(\x01R\x0bpositionsMm\x12)\n\x11speeds_mm_per_sec\x18\x03 \x03(\x01R\x0espeedsMmPerSec\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\x18\n\x16MoveToPositionResponse"P\n\x0bHomeRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"$\n\x0cHomeResponse\x12\x14\n\x05homed\x18\x01 \x01(\x08R\x05homed"V\n\x11GetLengthsRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"3\n\x12GetLengthsResponse\x12\x1d\n\nlengths_mm\x18\x01 \x03(\x01R\tlengthsMm"P\n\x0bStopRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\x0e\n\x0cStopResponse"g\n\x06Status\x12!\n\x0cpositions_mm\x18\x01 \x03(\x01R\x0bpositionsMm\x12\x1d\n\nlengths_mm\x18\x02 \x03(\x01R\tlengthsMm\x12\x1b\n\tis_moving\x18\x03 \x01(\x08R\x08isMoving"%\n\x0fIsMovingRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name"/\n\x10IsMovingResponse\x12\x1b\n\tis_moving\x18\x01 \x01(\x08R\x08isMoving2\xda\t\n\rGantryService\x12\xa1\x01\n\x0bGetPosition\x12,.viam.component.gantry.v1.GetPositionRequest\x1a-.viam.component.gantry.v1.GetPositionResponse"5\x82\xd3\xe4\x93\x02/\x12-/viam/api/v1/component/gantry/{name}/position\x12\xae\x01\n\x0eMoveToPosition\x12/.viam.component.gantry.v1.MoveToPositionRequest\x1a0.viam.component.gantry.v1.MoveToPositionResponse"9\xa0\x92)\x01\x82\xd3\xe4\x93\x02/\x1a-/viam/api/v1/component/gantry/{name}/position\x12\x88\x01\n\x04Home\x12%.viam.component.gantry.v1.HomeRequest\x1a&.viam.component.gantry.v1.HomeResponse"1\x82\xd3\xe4\x93\x02+\x1a)/viam/api/v1/component/gantry/{name}/home\x12\x9d\x01\n\nGetLengths\x12+.viam.component.gantry.v1.GetLengthsRequest\x1a,.viam.component.gantry.v1.GetLengthsResponse"4\x82\xd3\xe4\x93\x02.\x12,/viam/api/v1/component/gantry/{name}/lengths\x12\x88\x01\n\x04Stop\x12%.viam.component.gantry.v1.StopRequest\x1a&.viam.component.gantry.v1.StopResponse"1\x82\xd3\xe4\x93\x02+")/viam/api/v1/component/gantry/{name}/stop\x12\x99\x01\n\x08IsMoving\x12).viam.component.gantry.v1.IsMovingRequest\x1a*.viam.component.gantry.v1.IsMovingResponse"6\x82\xd3\xe4\x93\x020\x12./viam/api/v1/component/gantry/{name}/is_moving\x12\x89\x01\n\tDoCommand\x12 .viam.common.v1.DoCommandRequest\x1a!.viam.common.v1.DoCommandResponse"7\x82\xd3\xe4\x93\x021"//viam/api/v1/component/gantry/{name}/do_command\x12\x95\x01\n\rGetGeometries\x12$.viam.common.v1.GetGeometriesRequest\x1a%.viam.common.v1.GetGeometriesResponse"7\x82\xd3\xe4\x93\x021\x12//viam/api/v1/component/gantry/{name}/geometriesBC\n\x1ccom.viam.component.gantry.v1Z#go.viam.com/api/component/gantry/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'component.gantry.v1.gantry_pb2', globals())
+_GETPOSITIONREQUEST = DESCRIPTOR.message_types_by_name['GetPositionRequest']
+_GETPOSITIONRESPONSE = DESCRIPTOR.message_types_by_name['GetPositionResponse']
+_MOVETOPOSITIONREQUEST = DESCRIPTOR.message_types_by_name['MoveToPositionRequest']
+_MOVETOPOSITIONRESPONSE = DESCRIPTOR.message_types_by_name['MoveToPositionResponse']
+_HOMEREQUEST = DESCRIPTOR.message_types_by_name['HomeRequest']
+_HOMERESPONSE = DESCRIPTOR.message_types_by_name['HomeResponse']
+_GETLENGTHSREQUEST = DESCRIPTOR.message_types_by_name['GetLengthsRequest']
+_GETLENGTHSRESPONSE = DESCRIPTOR.message_types_by_name['GetLengthsResponse']
+_STOPREQUEST = DESCRIPTOR.message_types_by_name['StopRequest']
+_STOPRESPONSE = DESCRIPTOR.message_types_by_name['StopResponse']
+_STATUS = DESCRIPTOR.message_types_by_name['Status']
+_ISMOVINGREQUEST = DESCRIPTOR.message_types_by_name['IsMovingRequest']
+_ISMOVINGRESPONSE = DESCRIPTOR.message_types_by_name['IsMovingResponse']
+GetPositionRequest = _reflection.GeneratedProtocolMessageType('GetPositionRequest', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(GetPositionRequest)
+GetPositionResponse = _reflection.GeneratedProtocolMessageType('GetPositionResponse', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONRESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(GetPositionResponse)
+MoveToPositionRequest = _reflection.GeneratedProtocolMessageType('MoveToPositionRequest', (_message.Message,), {'DESCRIPTOR': _MOVETOPOSITIONREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(MoveToPositionRequest)
+MoveToPositionResponse = _reflection.GeneratedProtocolMessageType('MoveToPositionResponse', (_message.Message,), {'DESCRIPTOR': _MOVETOPOSITIONRESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(MoveToPositionResponse)
+HomeRequest = _reflection.GeneratedProtocolMessageType('HomeRequest', (_message.Message,), {'DESCRIPTOR': _HOMEREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(HomeRequest)
+HomeResponse = _reflection.GeneratedProtocolMessageType('HomeResponse', (_message.Message,), {'DESCRIPTOR': _HOMERESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(HomeResponse)
+GetLengthsRequest = _reflection.GeneratedProtocolMessageType('GetLengthsRequest', (_message.Message,), {'DESCRIPTOR': _GETLENGTHSREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(GetLengthsRequest)
+GetLengthsResponse = _reflection.GeneratedProtocolMessageType('GetLengthsResponse', (_message.Message,), {'DESCRIPTOR': _GETLENGTHSRESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(GetLengthsResponse)
+StopRequest = _reflection.GeneratedProtocolMessageType('StopRequest', (_message.Message,), {'DESCRIPTOR': _STOPREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(StopRequest)
+StopResponse = _reflection.GeneratedProtocolMessageType('StopResponse', (_message.Message,), {'DESCRIPTOR': _STOPRESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(StopResponse)
+Status = _reflection.GeneratedProtocolMessageType('Status', (_message.Message,), {'DESCRIPTOR': _STATUS, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(Status)
+IsMovingRequest = _reflection.GeneratedProtocolMessageType('IsMovingRequest', (_message.Message,), {'DESCRIPTOR': _ISMOVINGREQUEST, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(IsMovingRequest)
+IsMovingResponse = _reflection.GeneratedProtocolMessageType('IsMovingResponse', (_message.Message,), {'DESCRIPTOR': _ISMOVINGRESPONSE, '__module__': 'component.gantry.v1.gantry_pb2'})
+_sym_db.RegisterMessage(IsMovingResponse)
+_GANTRYSERVICE = DESCRIPTOR.services_by_name['GantryService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'\n\x1ccom.viam.component.gantry.v1Z#go.viam.com/api/component/gantry/v1'

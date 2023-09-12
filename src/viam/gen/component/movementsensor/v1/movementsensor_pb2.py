@@ -1,15 +1,65 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 from ....common.v1 import common_pb2 as common_dot_v1_dot_common__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n0component/movementsensor/v1/movementsensor.proto\x12 viam.component.movementsensor.v1\x1a\x16common/v1/common.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1cgoogle/protobuf/struct.proto"]\n\x18GetLinearVelocityRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"]\n\x19GetLinearVelocityResponse\x12@\n\x0flinear_velocity\x18\x01 \x01(\x0b2\x17.viam.common.v1.Vector3R\x0elinearVelocity"^\n\x19GetAngularVelocityRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"`\n\x1aGetAngularVelocityResponse\x12B\n\x10angular_velocity\x18\x01 \x01(\x0b2\x17.viam.common.v1.Vector3R\x0fangularVelocity"]\n\x18GetCompassHeadingRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"1\n\x19GetCompassHeadingResponse\x12\x14\n\x05value\x18\x01 \x01(\x01R\x05value"Z\n\x15GetOrientationRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"W\n\x16GetOrientationResponse\x12=\n\x0borientation\x18\x01 \x01(\x0b2\x1b.viam.common.v1.OrientationR\x0borientation"W\n\x12GetPositionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"n\n\x13GetPositionResponse\x128\n\ncoordinate\x18\x01 \x01(\x0b2\x18.viam.common.v1.GeoPointR\ncoordinate\x12\x1d\n\naltitude_m\x18\x02 \x01(\x02R\taltitudeM"Y\n\x14GetPropertiesRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\xf5\x02\n\x15GetPropertiesResponse\x12:\n\x19linear_velocity_supported\x18\x01 \x01(\x08R\x17linearVelocitySupported\x12<\n\x1aangular_velocity_supported\x18\x02 \x01(\x08R\x18angularVelocitySupported\x123\n\x15orientation_supported\x18\x03 \x01(\x08R\x14orientationSupported\x12-\n\x12position_supported\x18\x04 \x01(\x08R\x11positionSupported\x12:\n\x19compass_heading_supported\x18\x05 \x01(\x08R\x17compassHeadingSupported\x12B\n\x1dlinear_acceleration_supported\x18\x06 \x01(\x08R\x1blinearAccelerationSupported"W\n\x12GetAccuracyRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\xb3\x01\n\x13GetAccuracyResponse\x12_\n\x08accuracy\x18\x01 \x03(\x0b2C.viam.component.movementsensor.v1.GetAccuracyResponse.AccuracyEntryR\x08accuracy\x1a;\n\rAccuracyEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\x02R\x05value:\x028\x01"a\n\x1cGetLinearAccelerationRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"i\n\x1dGetLinearAccelerationResponse\x12H\n\x13linear_acceleration\x18\x01 \x01(\x0b2\x17.viam.common.v1.Vector3R\x12linearAcceleration2\xb7\x0f\n\x15MovementSensorService\x12\xd2\x01\n\x11GetLinearVelocity\x12:.viam.component.movementsensor.v1.GetLinearVelocityRequest\x1a;.viam.component.movementsensor.v1.GetLinearVelocityResponse"D\x82\xd3\xe4\x93\x02>\x12</viam/api/v1/component/movementsensor/{name}/linear_velocity\x12\xd6\x01\n\x12GetAngularVelocity\x12;.viam.component.movementsensor.v1.GetAngularVelocityRequest\x1a<.viam.component.movementsensor.v1.GetAngularVelocityResponse"E\x82\xd3\xe4\x93\x02?\x12=/viam/api/v1/component/movementsensor/{name}/angular_velocity\x12\xd2\x01\n\x11GetCompassHeading\x12:.viam.component.movementsensor.v1.GetCompassHeadingRequest\x1a;.viam.component.movementsensor.v1.GetCompassHeadingResponse"D\x82\xd3\xe4\x93\x02>\x12</viam/api/v1/component/movementsensor/{name}/compass_heading\x12\xc5\x01\n\x0eGetOrientation\x127.viam.component.movementsensor.v1.GetOrientationRequest\x1a8.viam.component.movementsensor.v1.GetOrientationResponse"@\x82\xd3\xe4\x93\x02:\x128/viam/api/v1/component/movementsensor/{name}/orientation\x12\xb9\x01\n\x0bGetPosition\x124.viam.component.movementsensor.v1.GetPositionRequest\x1a5.viam.component.movementsensor.v1.GetPositionResponse"=\x82\xd3\xe4\x93\x027\x125/viam/api/v1/component/movementsensor/{name}/position\x12\xc1\x01\n\rGetProperties\x126.viam.component.movementsensor.v1.GetPropertiesRequest\x1a7.viam.component.movementsensor.v1.GetPropertiesResponse"?\x82\xd3\xe4\x93\x029\x127/viam/api/v1/component/movementsensor/{name}/properties\x12\xb9\x01\n\x0bGetAccuracy\x124.viam.component.movementsensor.v1.GetAccuracyRequest\x1a5.viam.component.movementsensor.v1.GetAccuracyResponse"=\x82\xd3\xe4\x93\x027\x125/viam/api/v1/component/movementsensor/{name}/accuracy\x12\xe2\x01\n\x15GetLinearAcceleration\x12>.viam.component.movementsensor.v1.GetLinearAccelerationRequest\x1a?.viam.component.movementsensor.v1.GetLinearAccelerationResponse"H\x82\xd3\xe4\x93\x02B\x12@/viam/api/v1/component/movementsensor/{name}/linear_acceleration\x12\x91\x01\n\tDoCommand\x12 .viam.common.v1.DoCommandRequest\x1a!.viam.common.v1.DoCommandResponse"?\x82\xd3\xe4\x93\x029"7/viam/api/v1/component/movementsensor/{name}/do_command\x12\x9d\x01\n\rGetGeometries\x12$.viam.common.v1.GetGeometriesRequest\x1a%.viam.common.v1.GetGeometriesResponse"?\x82\xd3\xe4\x93\x029\x127/viam/api/v1/component/movementsensor/{name}/geometriesBS\n$com.viam.component.movementsensor.v1Z+go.viam.com/api/component/movementsensor/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'component.movementsensor.v1.movementsensor_pb2', globals())
+_GETLINEARVELOCITYREQUEST = DESCRIPTOR.message_types_by_name['GetLinearVelocityRequest']
+_GETLINEARVELOCITYRESPONSE = DESCRIPTOR.message_types_by_name['GetLinearVelocityResponse']
+_GETANGULARVELOCITYREQUEST = DESCRIPTOR.message_types_by_name['GetAngularVelocityRequest']
+_GETANGULARVELOCITYRESPONSE = DESCRIPTOR.message_types_by_name['GetAngularVelocityResponse']
+_GETCOMPASSHEADINGREQUEST = DESCRIPTOR.message_types_by_name['GetCompassHeadingRequest']
+_GETCOMPASSHEADINGRESPONSE = DESCRIPTOR.message_types_by_name['GetCompassHeadingResponse']
+_GETORIENTATIONREQUEST = DESCRIPTOR.message_types_by_name['GetOrientationRequest']
+_GETORIENTATIONRESPONSE = DESCRIPTOR.message_types_by_name['GetOrientationResponse']
+_GETPOSITIONREQUEST = DESCRIPTOR.message_types_by_name['GetPositionRequest']
+_GETPOSITIONRESPONSE = DESCRIPTOR.message_types_by_name['GetPositionResponse']
+_GETPROPERTIESREQUEST = DESCRIPTOR.message_types_by_name['GetPropertiesRequest']
+_GETPROPERTIESRESPONSE = DESCRIPTOR.message_types_by_name['GetPropertiesResponse']
+_GETACCURACYREQUEST = DESCRIPTOR.message_types_by_name['GetAccuracyRequest']
+_GETACCURACYRESPONSE = DESCRIPTOR.message_types_by_name['GetAccuracyResponse']
+_GETACCURACYRESPONSE_ACCURACYENTRY = _GETACCURACYRESPONSE.nested_types_by_name['AccuracyEntry']
+_GETLINEARACCELERATIONREQUEST = DESCRIPTOR.message_types_by_name['GetLinearAccelerationRequest']
+_GETLINEARACCELERATIONRESPONSE = DESCRIPTOR.message_types_by_name['GetLinearAccelerationResponse']
+GetLinearVelocityRequest = _reflection.GeneratedProtocolMessageType('GetLinearVelocityRequest', (_message.Message,), {'DESCRIPTOR': _GETLINEARVELOCITYREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetLinearVelocityRequest)
+GetLinearVelocityResponse = _reflection.GeneratedProtocolMessageType('GetLinearVelocityResponse', (_message.Message,), {'DESCRIPTOR': _GETLINEARVELOCITYRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetLinearVelocityResponse)
+GetAngularVelocityRequest = _reflection.GeneratedProtocolMessageType('GetAngularVelocityRequest', (_message.Message,), {'DESCRIPTOR': _GETANGULARVELOCITYREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetAngularVelocityRequest)
+GetAngularVelocityResponse = _reflection.GeneratedProtocolMessageType('GetAngularVelocityResponse', (_message.Message,), {'DESCRIPTOR': _GETANGULARVELOCITYRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetAngularVelocityResponse)
+GetCompassHeadingRequest = _reflection.GeneratedProtocolMessageType('GetCompassHeadingRequest', (_message.Message,), {'DESCRIPTOR': _GETCOMPASSHEADINGREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetCompassHeadingRequest)
+GetCompassHeadingResponse = _reflection.GeneratedProtocolMessageType('GetCompassHeadingResponse', (_message.Message,), {'DESCRIPTOR': _GETCOMPASSHEADINGRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetCompassHeadingResponse)
+GetOrientationRequest = _reflection.GeneratedProtocolMessageType('GetOrientationRequest', (_message.Message,), {'DESCRIPTOR': _GETORIENTATIONREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetOrientationRequest)
+GetOrientationResponse = _reflection.GeneratedProtocolMessageType('GetOrientationResponse', (_message.Message,), {'DESCRIPTOR': _GETORIENTATIONRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetOrientationResponse)
+GetPositionRequest = _reflection.GeneratedProtocolMessageType('GetPositionRequest', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetPositionRequest)
+GetPositionResponse = _reflection.GeneratedProtocolMessageType('GetPositionResponse', (_message.Message,), {'DESCRIPTOR': _GETPOSITIONRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetPositionResponse)
+GetPropertiesRequest = _reflection.GeneratedProtocolMessageType('GetPropertiesRequest', (_message.Message,), {'DESCRIPTOR': _GETPROPERTIESREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetPropertiesRequest)
+GetPropertiesResponse = _reflection.GeneratedProtocolMessageType('GetPropertiesResponse', (_message.Message,), {'DESCRIPTOR': _GETPROPERTIESRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetPropertiesResponse)
+GetAccuracyRequest = _reflection.GeneratedProtocolMessageType('GetAccuracyRequest', (_message.Message,), {'DESCRIPTOR': _GETACCURACYREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetAccuracyRequest)
+GetAccuracyResponse = _reflection.GeneratedProtocolMessageType('GetAccuracyResponse', (_message.Message,), {'AccuracyEntry': _reflection.GeneratedProtocolMessageType('AccuracyEntry', (_message.Message,), {'DESCRIPTOR': _GETACCURACYRESPONSE_ACCURACYENTRY, '__module__': 'component.movementsensor.v1.movementsensor_pb2'}), 'DESCRIPTOR': _GETACCURACYRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetAccuracyResponse)
+_sym_db.RegisterMessage(GetAccuracyResponse.AccuracyEntry)
+GetLinearAccelerationRequest = _reflection.GeneratedProtocolMessageType('GetLinearAccelerationRequest', (_message.Message,), {'DESCRIPTOR': _GETLINEARACCELERATIONREQUEST, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetLinearAccelerationRequest)
+GetLinearAccelerationResponse = _reflection.GeneratedProtocolMessageType('GetLinearAccelerationResponse', (_message.Message,), {'DESCRIPTOR': _GETLINEARACCELERATIONRESPONSE, '__module__': 'component.movementsensor.v1.movementsensor_pb2'})
+_sym_db.RegisterMessage(GetLinearAccelerationResponse)
+_MOVEMENTSENSORSERVICE = DESCRIPTOR.services_by_name['MovementSensorService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'\n$com.viam.component.movementsensor.v1Z+go.viam.com/api/component/movementsensor/v1'

@@ -1,14 +1,79 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n service/mlmodel/v1/mlmodel.proto\x12\x17viam.service.mlmodel.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1cgoogle/protobuf/struct.proto"\xd4\x01\n\x0cInferRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x126\n\ninput_data\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\tinputData\x12I\n\rinput_tensors\x18\x03 \x01(\x0b2$.viam.service.mlmodel.v1.FlatTensorsR\x0cinputTensors\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\x96\x01\n\rInferResponse\x128\n\x0boutput_data\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\noutputData\x12K\n\x0eoutput_tensors\x18\x03 \x01(\x0b2$.viam.service.mlmodel.v1.FlatTensorsR\routputTensors"T\n\x0fMetadataRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"Q\n\x10MetadataResponse\x12=\n\x08metadata\x18\x01 \x01(\x0b2!.viam.service.mlmodel.v1.MetadataR\x08metadata"\xde\x01\n\x08Metadata\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type\x12 \n\x0bdescription\x18\x03 \x01(\tR\x0bdescription\x12B\n\ninput_info\x18\x04 \x03(\x0b2#.viam.service.mlmodel.v1.TensorInfoR\tinputInfo\x12D\n\x0boutput_info\x18\x05 \x03(\x0b2#.viam.service.mlmodel.v1.TensorInfoR\noutputInfo"\xee\x01\n\nTensorInfo\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12 \n\x0bdescription\x18\x02 \x01(\tR\x0bdescription\x12\x1b\n\tdata_type\x18\x03 \x01(\tR\x08dataType\x12\x14\n\x05shape\x18\x04 \x03(\x05R\x05shape\x12H\n\x10associated_files\x18\x05 \x03(\x0b2\x1d.viam.service.mlmodel.v1.FileR\x0fassociatedFiles\x12-\n\x05extra\x18c \x01(\x0b2\x17.google.protobuf.StructR\x05extra"\x7f\n\x04File\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12 \n\x0bdescription\x18\x02 \x01(\tR\x0bdescription\x12A\n\nlabel_type\x18\x03 \x01(\x0e2".viam.service.mlmodel.v1.LabelTypeR\tlabelType"(\n\x12FlatTensorDataInt8\x12\x12\n\x04data\x18\x01 \x01(\x0cR\x04data")\n\x13FlatTensorDataUInt8\x12\x12\n\x04data\x18\x01 \x01(\x0cR\x04data"-\n\x13FlatTensorDataInt16\x12\x16\n\x04data\x18\x01 \x03(\x07B\x02\x10\x01R\x04data".\n\x14FlatTensorDataUInt16\x12\x16\n\x04data\x18\x01 \x03(\x07B\x02\x10\x01R\x04data"-\n\x13FlatTensorDataInt32\x12\x16\n\x04data\x18\x01 \x03(\x0fB\x02\x10\x01R\x04data".\n\x14FlatTensorDataUInt32\x12\x16\n\x04data\x18\x01 \x03(\x07B\x02\x10\x01R\x04data"-\n\x13FlatTensorDataInt64\x12\x16\n\x04data\x18\x01 \x03(\x10B\x02\x10\x01R\x04data".\n\x14FlatTensorDataUInt64\x12\x16\n\x04data\x18\x01 \x03(\x06B\x02\x10\x01R\x04data"-\n\x13FlatTensorDataFloat\x12\x16\n\x04data\x18\x01 \x03(\x02B\x02\x10\x01R\x04data".\n\x14FlatTensorDataDouble\x12\x16\n\x04data\x18\x01 \x03(\x01B\x02\x10\x01R\x04data"\xf3\x06\n\nFlatTensor\x12\x14\n\x05shape\x18\x01 \x03(\x06R\x05shape\x12N\n\x0bint8_tensor\x18\x02 \x01(\x0b2+.viam.service.mlmodel.v1.FlatTensorDataInt8H\x00R\nint8Tensor\x12Q\n\x0cuint8_tensor\x18\x03 \x01(\x0b2,.viam.service.mlmodel.v1.FlatTensorDataUInt8H\x00R\x0buint8Tensor\x12Q\n\x0cint16_tensor\x18\x04 \x01(\x0b2,.viam.service.mlmodel.v1.FlatTensorDataInt16H\x00R\x0bint16Tensor\x12T\n\ruint16_tensor\x18\x05 \x01(\x0b2-.viam.service.mlmodel.v1.FlatTensorDataUInt16H\x00R\x0cuint16Tensor\x12Q\n\x0cint32_tensor\x18\x06 \x01(\x0b2,.viam.service.mlmodel.v1.FlatTensorDataInt32H\x00R\x0bint32Tensor\x12T\n\ruint32_tensor\x18\x07 \x01(\x0b2-.viam.service.mlmodel.v1.FlatTensorDataUInt32H\x00R\x0cuint32Tensor\x12Q\n\x0cint64_tensor\x18\x08 \x01(\x0b2,.viam.service.mlmodel.v1.FlatTensorDataInt64H\x00R\x0bint64Tensor\x12T\n\ruint64_tensor\x18\t \x01(\x0b2-.viam.service.mlmodel.v1.FlatTensorDataUInt64H\x00R\x0cuint64Tensor\x12Q\n\x0cfloat_tensor\x18\n \x01(\x0b2,.viam.service.mlmodel.v1.FlatTensorDataFloatH\x00R\x0bfloatTensor\x12T\n\rdouble_tensor\x18\x0b \x01(\x0b2-.viam.service.mlmodel.v1.FlatTensorDataDoubleH\x00R\x0cdoubleTensorB\x08\n\x06tensor"\xbb\x01\n\x0bFlatTensors\x12K\n\x07tensors\x18\x01 \x03(\x0b21.viam.service.mlmodel.v1.FlatTensors.TensorsEntryR\x07tensors\x1a_\n\x0cTensorsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x129\n\x05value\x18\x02 \x01(\x0b2#.viam.service.mlmodel.v1.FlatTensorR\x05value:\x028\x01*`\n\tLabelType\x12\x1a\n\x16LABEL_TYPE_UNSPECIFIED\x10\x00\x12\x1b\n\x17LABEL_TYPE_TENSOR_VALUE\x10\x01\x12\x1a\n\x16LABEL_TYPE_TENSOR_AXIS\x10\x022\xb4\x02\n\x0eMLModelService\x12\x89\x01\n\x05Infer\x12%.viam.service.mlmodel.v1.InferRequest\x1a&.viam.service.mlmodel.v1.InferResponse"1\x82\xd3\xe4\x93\x02+")/viam/api/v1/service/mlmodel/{name}/infer\x12\x95\x01\n\x08Metadata\x12(.viam.service.mlmodel.v1.MetadataRequest\x1a).viam.service.mlmodel.v1.MetadataResponse"4\x82\xd3\xe4\x93\x02.\x12,/viam/api/v1/service/mlmodel/{name}/metadataBA\n\x1bcom.viam.service.mlmodel.v1Z"go.viam.com/api/service/mlmodel/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'service.mlmodel.v1.mlmodel_pb2', globals())
+_LABELTYPE = DESCRIPTOR.enum_types_by_name['LabelType']
+LabelType = enum_type_wrapper.EnumTypeWrapper(_LABELTYPE)
+LABEL_TYPE_UNSPECIFIED = 0
+LABEL_TYPE_TENSOR_VALUE = 1
+LABEL_TYPE_TENSOR_AXIS = 2
+_INFERREQUEST = DESCRIPTOR.message_types_by_name['InferRequest']
+_INFERRESPONSE = DESCRIPTOR.message_types_by_name['InferResponse']
+_METADATAREQUEST = DESCRIPTOR.message_types_by_name['MetadataRequest']
+_METADATARESPONSE = DESCRIPTOR.message_types_by_name['MetadataResponse']
+_METADATA = DESCRIPTOR.message_types_by_name['Metadata']
+_TENSORINFO = DESCRIPTOR.message_types_by_name['TensorInfo']
+_FILE = DESCRIPTOR.message_types_by_name['File']
+_FLATTENSORDATAINT8 = DESCRIPTOR.message_types_by_name['FlatTensorDataInt8']
+_FLATTENSORDATAUINT8 = DESCRIPTOR.message_types_by_name['FlatTensorDataUInt8']
+_FLATTENSORDATAINT16 = DESCRIPTOR.message_types_by_name['FlatTensorDataInt16']
+_FLATTENSORDATAUINT16 = DESCRIPTOR.message_types_by_name['FlatTensorDataUInt16']
+_FLATTENSORDATAINT32 = DESCRIPTOR.message_types_by_name['FlatTensorDataInt32']
+_FLATTENSORDATAUINT32 = DESCRIPTOR.message_types_by_name['FlatTensorDataUInt32']
+_FLATTENSORDATAINT64 = DESCRIPTOR.message_types_by_name['FlatTensorDataInt64']
+_FLATTENSORDATAUINT64 = DESCRIPTOR.message_types_by_name['FlatTensorDataUInt64']
+_FLATTENSORDATAFLOAT = DESCRIPTOR.message_types_by_name['FlatTensorDataFloat']
+_FLATTENSORDATADOUBLE = DESCRIPTOR.message_types_by_name['FlatTensorDataDouble']
+_FLATTENSOR = DESCRIPTOR.message_types_by_name['FlatTensor']
+_FLATTENSORS = DESCRIPTOR.message_types_by_name['FlatTensors']
+_FLATTENSORS_TENSORSENTRY = _FLATTENSORS.nested_types_by_name['TensorsEntry']
+InferRequest = _reflection.GeneratedProtocolMessageType('InferRequest', (_message.Message,), {'DESCRIPTOR': _INFERREQUEST, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(InferRequest)
+InferResponse = _reflection.GeneratedProtocolMessageType('InferResponse', (_message.Message,), {'DESCRIPTOR': _INFERRESPONSE, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(InferResponse)
+MetadataRequest = _reflection.GeneratedProtocolMessageType('MetadataRequest', (_message.Message,), {'DESCRIPTOR': _METADATAREQUEST, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(MetadataRequest)
+MetadataResponse = _reflection.GeneratedProtocolMessageType('MetadataResponse', (_message.Message,), {'DESCRIPTOR': _METADATARESPONSE, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(MetadataResponse)
+Metadata = _reflection.GeneratedProtocolMessageType('Metadata', (_message.Message,), {'DESCRIPTOR': _METADATA, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(Metadata)
+TensorInfo = _reflection.GeneratedProtocolMessageType('TensorInfo', (_message.Message,), {'DESCRIPTOR': _TENSORINFO, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(TensorInfo)
+File = _reflection.GeneratedProtocolMessageType('File', (_message.Message,), {'DESCRIPTOR': _FILE, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(File)
+FlatTensorDataInt8 = _reflection.GeneratedProtocolMessageType('FlatTensorDataInt8', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAINT8, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataInt8)
+FlatTensorDataUInt8 = _reflection.GeneratedProtocolMessageType('FlatTensorDataUInt8', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAUINT8, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataUInt8)
+FlatTensorDataInt16 = _reflection.GeneratedProtocolMessageType('FlatTensorDataInt16', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAINT16, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataInt16)
+FlatTensorDataUInt16 = _reflection.GeneratedProtocolMessageType('FlatTensorDataUInt16', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAUINT16, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataUInt16)
+FlatTensorDataInt32 = _reflection.GeneratedProtocolMessageType('FlatTensorDataInt32', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAINT32, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataInt32)
+FlatTensorDataUInt32 = _reflection.GeneratedProtocolMessageType('FlatTensorDataUInt32', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAUINT32, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataUInt32)
+FlatTensorDataInt64 = _reflection.GeneratedProtocolMessageType('FlatTensorDataInt64', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAINT64, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataInt64)
+FlatTensorDataUInt64 = _reflection.GeneratedProtocolMessageType('FlatTensorDataUInt64', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAUINT64, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataUInt64)
+FlatTensorDataFloat = _reflection.GeneratedProtocolMessageType('FlatTensorDataFloat', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATAFLOAT, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataFloat)
+FlatTensorDataDouble = _reflection.GeneratedProtocolMessageType('FlatTensorDataDouble', (_message.Message,), {'DESCRIPTOR': _FLATTENSORDATADOUBLE, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensorDataDouble)
+FlatTensor = _reflection.GeneratedProtocolMessageType('FlatTensor', (_message.Message,), {'DESCRIPTOR': _FLATTENSOR, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensor)
+FlatTensors = _reflection.GeneratedProtocolMessageType('FlatTensors', (_message.Message,), {'TensorsEntry': _reflection.GeneratedProtocolMessageType('TensorsEntry', (_message.Message,), {'DESCRIPTOR': _FLATTENSORS_TENSORSENTRY, '__module__': 'service.mlmodel.v1.mlmodel_pb2'}), 'DESCRIPTOR': _FLATTENSORS, '__module__': 'service.mlmodel.v1.mlmodel_pb2'})
+_sym_db.RegisterMessage(FlatTensors)
+_sym_db.RegisterMessage(FlatTensors.TensorsEntry)
+_MLMODELSERVICE = DESCRIPTOR.services_by_name['MLModelService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'\n\x1bcom.viam.service.mlmodel.v1Z"go.viam.com/api/service/mlmodel/v1'

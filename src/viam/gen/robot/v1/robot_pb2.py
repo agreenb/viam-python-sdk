@@ -1,7 +1,9 @@
 """Generated protocol buffer code."""
-from google.protobuf.internal import builder as _builder
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 from ...common.v1 import common_pb2 as common_dot_v1_dot_common__pb2
@@ -10,8 +12,129 @@ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb
 from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14robot/v1/robot.proto\x12\rviam.robot.v1\x1a\x16common/v1/common.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto"}\n\x11FrameSystemConfig\x12/\n\x05frame\x18\x01 \x01(\x0b2\x19.viam.common.v1.TransformR\x05frame\x127\n\nkinematics\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\nkinematics"n\n\x18FrameSystemConfigRequest\x12R\n\x17supplemental_transforms\x18\x01 \x03(\x0b2\x19.viam.common.v1.TransformR\x16supplementalTransforms"o\n\x19FrameSystemConfigResponse\x12R\n\x14frame_system_configs\x18\x01 \x03(\x0b2 .viam.robot.v1.FrameSystemConfigR\x12frameSystemConfigs"\xc1\x01\n\x14TransformPoseRequest\x123\n\x06source\x18\x01 \x01(\x0b2\x1b.viam.common.v1.PoseInFrameR\x06source\x12 \n\x0bdestination\x18\x02 \x01(\tR\x0bdestination\x12R\n\x17supplemental_transforms\x18\x03 \x03(\x0b2\x19.viam.common.v1.TransformR\x16supplementalTransforms"H\n\x15TransformPoseResponse\x12/\n\x04pose\x18\x01 \x01(\x0b2\x1b.viam.common.v1.PoseInFrameR\x04pose"w\n\x13TransformPCDRequest\x12&\n\x0fpoint_cloud_pcd\x18\x01 \x01(\x0cR\rpointCloudPcd\x12\x16\n\x06source\x18\x02 \x01(\tR\x06source\x12 \n\x0bdestination\x18\x03 \x01(\tR\x0bdestination">\n\x14TransformPCDResponse\x12&\n\x0fpoint_cloud_pcd\x18\x01 \x01(\x0cR\rpointCloudPcd"\x16\n\x14ResourceNamesRequest"S\n\x15ResourceNamesResponse\x12:\n\tresources\x18\x01 \x03(\x0b2\x1c.viam.common.v1.ResourceNameR\tresources"q\n\x12ResourceRPCSubtype\x126\n\x07subtype\x18\x01 \x01(\x0b2\x1c.viam.common.v1.ResourceNameR\x07subtype\x12#\n\rproto_service\x18\x02 \x01(\tR\x0cprotoService"\x1c\n\x1aResourceRPCSubtypesRequest"t\n\x1bResourceRPCSubtypesResponse\x12U\n\x15resource_rpc_subtypes\x18\x01 \x03(\x0b2!.viam.robot.v1.ResourceRPCSubtypeR\x13resourceRpcSubtypes"\xd3\x01\n\tOperation\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n\x06method\x18\x02 \x01(\tR\x06method\x125\n\targuments\x18\x03 \x01(\x0b2\x17.google.protobuf.StructR\targuments\x124\n\x07started\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampR\x07started\x12"\n\nsession_id\x18\x05 \x01(\tH\x00R\tsessionId\x88\x01\x01B\r\n\x0b_session_id"\x16\n\x14GetOperationsRequest"Q\n\x15GetOperationsResponse\x128\n\noperations\x18\x01 \x03(\x0b2\x18.viam.robot.v1.OperationR\noperations"(\n\x16CancelOperationRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id"\x19\n\x17CancelOperationResponse"*\n\x18BlockForOperationRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id"\x1b\n\x19BlockForOperationResponse"\xc6\x01\n\x12PeerConnectionInfo\x125\n\x04type\x18\x01 \x01(\x0e2!.viam.robot.v1.PeerConnectionTypeR\x04type\x12*\n\x0eremote_address\x18\x02 \x01(\tH\x00R\rremoteAddress\x88\x01\x01\x12(\n\rlocal_address\x18\x03 \x01(\tH\x01R\x0clocalAddress\x88\x01\x01B\x11\n\x0f_remote_addressB\x10\n\x0e_local_address"\x8c\x01\n\x07Session\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12X\n\x14peer_connection_info\x18\x02 \x01(\x0b2!.viam.robot.v1.PeerConnectionInfoH\x00R\x12peerConnectionInfo\x88\x01\x01B\x17\n\x15_peer_connection_info"\x14\n\x12GetSessionsRequest"I\n\x13GetSessionsResponse\x122\n\x08sessions\x18\x01 \x03(\x0b2\x16.viam.robot.v1.SessionR\x08sessions"@\n\x0eDiscoveryQuery\x12\x18\n\x07subtype\x18\x01 \x01(\tR\x07subtype\x12\x14\n\x05model\x18\x02 \x01(\tR\x05model"s\n\tDiscovery\x123\n\x05query\x18\x01 \x01(\x0b2\x1d.viam.robot.v1.DiscoveryQueryR\x05query\x121\n\x07results\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\x07results"T\n\x19DiscoverComponentsRequest\x127\n\x07queries\x18\x01 \x03(\x0b2\x1d.viam.robot.v1.DiscoveryQueryR\x07queries"T\n\x1aDiscoverComponentsResponse\x126\n\tdiscovery\x18\x01 \x03(\x0b2\x18.viam.robot.v1.DiscoveryR\tdiscovery"k\n\x06Status\x120\n\x04name\x18\x01 \x01(\x0b2\x1c.viam.common.v1.ResourceNameR\x04name\x12/\n\x06status\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\x06status"W\n\x10GetStatusRequest\x12C\n\x0eresource_names\x18\x01 \x03(\x0b2\x1c.viam.common.v1.ResourceNameR\rresourceNames"B\n\x11GetStatusResponse\x12-\n\x06status\x18\x01 \x03(\x0b2\x15.viam.robot.v1.StatusR\x06status"\x8b\x01\n\x13StreamStatusRequest\x12C\n\x0eresource_names\x18\x01 \x03(\x0b2\x1c.viam.common.v1.ResourceNameR\rresourceNames\x12/\n\x05every\x18\x02 \x01(\x0b2\x19.google.protobuf.DurationR\x05every"E\n\x14StreamStatusResponse\x12-\n\x06status\x18\x01 \x03(\x0b2\x15.viam.robot.v1.StatusR\x06status"x\n\x13StopExtraParameters\x120\n\x04name\x18\x01 \x01(\x0b2\x1c.viam.common.v1.ResourceNameR\x04name\x12/\n\x06params\x18\x02 \x01(\x0b2\x17.google.protobuf.StructR\x06params"J\n\x0eStopAllRequest\x128\n\x05extra\x18c \x03(\x0b2".viam.robot.v1.StopExtraParametersR\x05extra"\x11\n\x0fStopAllResponse"-\n\x13StartSessionRequest\x12\x16\n\x06resume\x18\x01 \x01(\tR\x06resume"l\n\x14StartSessionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12D\n\x10heartbeat_window\x18\x02 \x01(\x0b2\x19.google.protobuf.DurationR\x0fheartbeatWindow"-\n\x1bSendSessionHeartbeatRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id"\x1e\n\x1cSendSessionHeartbeatResponse*z\n\x12PeerConnectionType\x12$\n PEER_CONNECTION_TYPE_UNSPECIFIED\x10\x00\x12\x1d\n\x19PEER_CONNECTION_TYPE_GRPC\x10\x01\x12\x1f\n\x1bPEER_CONNECTION_TYPE_WEBRTC\x10\x022\xf8\x0f\n\x0cRobotService\x12\x80\x01\n\rGetOperations\x12#.viam.robot.v1.GetOperationsRequest\x1a$.viam.robot.v1.GetOperationsResponse"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/viam/api/v1/operations/list\x12x\n\x0bGetSessions\x12!.viam.robot.v1.GetSessionsRequest\x1a".viam.robot.v1.GetSessionsResponse""\x82\xd3\xe4\x93\x02\x1c\x12\x1a/viam/api/v1/sessions/list\x12\x7f\n\rResourceNames\x12#.viam.robot.v1.ResourceNamesRequest\x1a$.viam.robot.v1.ResourceNamesResponse"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/viam/api/v1/resources/list\x12\x9d\x01\n\x13ResourceRPCSubtypes\x12).viam.robot.v1.ResourceRPCSubtypesRequest\x1a*.viam.robot.v1.ResourceRPCSubtypesResponse"/\x82\xd3\xe4\x93\x02)\x12\'/viam/api/v1/resource_rpc_subtypes/list\x12\x88\x01\n\x0fCancelOperation\x12%.viam.robot.v1.CancelOperationRequest\x1a&.viam.robot.v1.CancelOperationResponse"&\x82\xd3\xe4\x93\x02 "\x1e/viam/api/v1/operations/cancel\x12\x8d\x01\n\x11BlockForOperation\x12\'.viam.robot.v1.BlockForOperationRequest\x1a(.viam.robot.v1.BlockForOperationResponse"%\x82\xd3\xe4\x93\x02\x1f"\x1d/viam/api/v1/operations/block\x12\x94\x01\n\x12DiscoverComponents\x12(.viam.robot.v1.DiscoverComponentsRequest\x1a).viam.robot.v1.DiscoverComponentsResponse")\x82\xd3\xe4\x93\x02#\x12!/viam/api/v1/discovery/components\x12\x90\x01\n\x11FrameSystemConfig\x12\'.viam.robot.v1.FrameSystemConfigRequest\x1a(.viam.robot.v1.FrameSystemConfigResponse"(\x82\xd3\xe4\x93\x02"\x12 /viam/api/v1/frame_system/config\x12\x8c\x01\n\rTransformPose\x12#.viam.robot.v1.TransformPoseRequest\x1a$.viam.robot.v1.TransformPoseResponse"0\x82\xd3\xe4\x93\x02*\x12(/viam/api/v1/frame_system/transform_pose\x12\x88\x01\n\x0cTransformPCD\x12".viam.robot.v1.TransformPCDRequest\x1a#.viam.robot.v1.TransformPCDResponse"/\x82\xd3\xe4\x93\x02)\x12\'/viam/api/v1/frame_system/transform_pcd\x12k\n\tGetStatus\x12\x1f.viam.robot.v1.GetStatusRequest\x1a .viam.robot.v1.GetStatusResponse"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/viam/api/v1/status\x12}\n\x0cStreamStatus\x12".viam.robot.v1.StreamStatusRequest\x1a#.viam.robot.v1.StreamStatusResponse""\x82\xd3\xe4\x93\x02\x1c\x12\x1a/viam/api/v1/status/stream0\x01\x12g\n\x07StopAll\x12\x1d.viam.robot.v1.StopAllRequest\x1a\x1e.viam.robot.v1.StopAllResponse"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/viam/api/v1/stop_all\x12v\n\x0cStartSession\x12".viam.robot.v1.StartSessionRequest\x1a#.viam.robot.v1.StartSessionResponse"\x1d\x82\xd3\xe4\x93\x02\x17"\x15/viam/api/v1/sessions\x12\x9d\x01\n\x14SendSessionHeartbeat\x12*.viam.robot.v1.SendSessionHeartbeatRequest\x1a+.viam.robot.v1.SendSessionHeartbeatResponse",\x82\xd3\xe4\x93\x02&"$/viam/api/v1/sessions/{id}/heartbeatB-\n\x11com.viam.robot.v1Z\x18go.viam.com/api/robot/v1b\x06proto3')
-_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'robot.v1.robot_pb2', globals())
+_PEERCONNECTIONTYPE = DESCRIPTOR.enum_types_by_name['PeerConnectionType']
+PeerConnectionType = enum_type_wrapper.EnumTypeWrapper(_PEERCONNECTIONTYPE)
+PEER_CONNECTION_TYPE_UNSPECIFIED = 0
+PEER_CONNECTION_TYPE_GRPC = 1
+PEER_CONNECTION_TYPE_WEBRTC = 2
+_FRAMESYSTEMCONFIG = DESCRIPTOR.message_types_by_name['FrameSystemConfig']
+_FRAMESYSTEMCONFIGREQUEST = DESCRIPTOR.message_types_by_name['FrameSystemConfigRequest']
+_FRAMESYSTEMCONFIGRESPONSE = DESCRIPTOR.message_types_by_name['FrameSystemConfigResponse']
+_TRANSFORMPOSEREQUEST = DESCRIPTOR.message_types_by_name['TransformPoseRequest']
+_TRANSFORMPOSERESPONSE = DESCRIPTOR.message_types_by_name['TransformPoseResponse']
+_TRANSFORMPCDREQUEST = DESCRIPTOR.message_types_by_name['TransformPCDRequest']
+_TRANSFORMPCDRESPONSE = DESCRIPTOR.message_types_by_name['TransformPCDResponse']
+_RESOURCENAMESREQUEST = DESCRIPTOR.message_types_by_name['ResourceNamesRequest']
+_RESOURCENAMESRESPONSE = DESCRIPTOR.message_types_by_name['ResourceNamesResponse']
+_RESOURCERPCSUBTYPE = DESCRIPTOR.message_types_by_name['ResourceRPCSubtype']
+_RESOURCERPCSUBTYPESREQUEST = DESCRIPTOR.message_types_by_name['ResourceRPCSubtypesRequest']
+_RESOURCERPCSUBTYPESRESPONSE = DESCRIPTOR.message_types_by_name['ResourceRPCSubtypesResponse']
+_OPERATION = DESCRIPTOR.message_types_by_name['Operation']
+_GETOPERATIONSREQUEST = DESCRIPTOR.message_types_by_name['GetOperationsRequest']
+_GETOPERATIONSRESPONSE = DESCRIPTOR.message_types_by_name['GetOperationsResponse']
+_CANCELOPERATIONREQUEST = DESCRIPTOR.message_types_by_name['CancelOperationRequest']
+_CANCELOPERATIONRESPONSE = DESCRIPTOR.message_types_by_name['CancelOperationResponse']
+_BLOCKFOROPERATIONREQUEST = DESCRIPTOR.message_types_by_name['BlockForOperationRequest']
+_BLOCKFOROPERATIONRESPONSE = DESCRIPTOR.message_types_by_name['BlockForOperationResponse']
+_PEERCONNECTIONINFO = DESCRIPTOR.message_types_by_name['PeerConnectionInfo']
+_SESSION = DESCRIPTOR.message_types_by_name['Session']
+_GETSESSIONSREQUEST = DESCRIPTOR.message_types_by_name['GetSessionsRequest']
+_GETSESSIONSRESPONSE = DESCRIPTOR.message_types_by_name['GetSessionsResponse']
+_DISCOVERYQUERY = DESCRIPTOR.message_types_by_name['DiscoveryQuery']
+_DISCOVERY = DESCRIPTOR.message_types_by_name['Discovery']
+_DISCOVERCOMPONENTSREQUEST = DESCRIPTOR.message_types_by_name['DiscoverComponentsRequest']
+_DISCOVERCOMPONENTSRESPONSE = DESCRIPTOR.message_types_by_name['DiscoverComponentsResponse']
+_STATUS = DESCRIPTOR.message_types_by_name['Status']
+_GETSTATUSREQUEST = DESCRIPTOR.message_types_by_name['GetStatusRequest']
+_GETSTATUSRESPONSE = DESCRIPTOR.message_types_by_name['GetStatusResponse']
+_STREAMSTATUSREQUEST = DESCRIPTOR.message_types_by_name['StreamStatusRequest']
+_STREAMSTATUSRESPONSE = DESCRIPTOR.message_types_by_name['StreamStatusResponse']
+_STOPEXTRAPARAMETERS = DESCRIPTOR.message_types_by_name['StopExtraParameters']
+_STOPALLREQUEST = DESCRIPTOR.message_types_by_name['StopAllRequest']
+_STOPALLRESPONSE = DESCRIPTOR.message_types_by_name['StopAllResponse']
+_STARTSESSIONREQUEST = DESCRIPTOR.message_types_by_name['StartSessionRequest']
+_STARTSESSIONRESPONSE = DESCRIPTOR.message_types_by_name['StartSessionResponse']
+_SENDSESSIONHEARTBEATREQUEST = DESCRIPTOR.message_types_by_name['SendSessionHeartbeatRequest']
+_SENDSESSIONHEARTBEATRESPONSE = DESCRIPTOR.message_types_by_name['SendSessionHeartbeatResponse']
+FrameSystemConfig = _reflection.GeneratedProtocolMessageType('FrameSystemConfig', (_message.Message,), {'DESCRIPTOR': _FRAMESYSTEMCONFIG, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(FrameSystemConfig)
+FrameSystemConfigRequest = _reflection.GeneratedProtocolMessageType('FrameSystemConfigRequest', (_message.Message,), {'DESCRIPTOR': _FRAMESYSTEMCONFIGREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(FrameSystemConfigRequest)
+FrameSystemConfigResponse = _reflection.GeneratedProtocolMessageType('FrameSystemConfigResponse', (_message.Message,), {'DESCRIPTOR': _FRAMESYSTEMCONFIGRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(FrameSystemConfigResponse)
+TransformPoseRequest = _reflection.GeneratedProtocolMessageType('TransformPoseRequest', (_message.Message,), {'DESCRIPTOR': _TRANSFORMPOSEREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(TransformPoseRequest)
+TransformPoseResponse = _reflection.GeneratedProtocolMessageType('TransformPoseResponse', (_message.Message,), {'DESCRIPTOR': _TRANSFORMPOSERESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(TransformPoseResponse)
+TransformPCDRequest = _reflection.GeneratedProtocolMessageType('TransformPCDRequest', (_message.Message,), {'DESCRIPTOR': _TRANSFORMPCDREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(TransformPCDRequest)
+TransformPCDResponse = _reflection.GeneratedProtocolMessageType('TransformPCDResponse', (_message.Message,), {'DESCRIPTOR': _TRANSFORMPCDRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(TransformPCDResponse)
+ResourceNamesRequest = _reflection.GeneratedProtocolMessageType('ResourceNamesRequest', (_message.Message,), {'DESCRIPTOR': _RESOURCENAMESREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(ResourceNamesRequest)
+ResourceNamesResponse = _reflection.GeneratedProtocolMessageType('ResourceNamesResponse', (_message.Message,), {'DESCRIPTOR': _RESOURCENAMESRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(ResourceNamesResponse)
+ResourceRPCSubtype = _reflection.GeneratedProtocolMessageType('ResourceRPCSubtype', (_message.Message,), {'DESCRIPTOR': _RESOURCERPCSUBTYPE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(ResourceRPCSubtype)
+ResourceRPCSubtypesRequest = _reflection.GeneratedProtocolMessageType('ResourceRPCSubtypesRequest', (_message.Message,), {'DESCRIPTOR': _RESOURCERPCSUBTYPESREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(ResourceRPCSubtypesRequest)
+ResourceRPCSubtypesResponse = _reflection.GeneratedProtocolMessageType('ResourceRPCSubtypesResponse', (_message.Message,), {'DESCRIPTOR': _RESOURCERPCSUBTYPESRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(ResourceRPCSubtypesResponse)
+Operation = _reflection.GeneratedProtocolMessageType('Operation', (_message.Message,), {'DESCRIPTOR': _OPERATION, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(Operation)
+GetOperationsRequest = _reflection.GeneratedProtocolMessageType('GetOperationsRequest', (_message.Message,), {'DESCRIPTOR': _GETOPERATIONSREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetOperationsRequest)
+GetOperationsResponse = _reflection.GeneratedProtocolMessageType('GetOperationsResponse', (_message.Message,), {'DESCRIPTOR': _GETOPERATIONSRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetOperationsResponse)
+CancelOperationRequest = _reflection.GeneratedProtocolMessageType('CancelOperationRequest', (_message.Message,), {'DESCRIPTOR': _CANCELOPERATIONREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(CancelOperationRequest)
+CancelOperationResponse = _reflection.GeneratedProtocolMessageType('CancelOperationResponse', (_message.Message,), {'DESCRIPTOR': _CANCELOPERATIONRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(CancelOperationResponse)
+BlockForOperationRequest = _reflection.GeneratedProtocolMessageType('BlockForOperationRequest', (_message.Message,), {'DESCRIPTOR': _BLOCKFOROPERATIONREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(BlockForOperationRequest)
+BlockForOperationResponse = _reflection.GeneratedProtocolMessageType('BlockForOperationResponse', (_message.Message,), {'DESCRIPTOR': _BLOCKFOROPERATIONRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(BlockForOperationResponse)
+PeerConnectionInfo = _reflection.GeneratedProtocolMessageType('PeerConnectionInfo', (_message.Message,), {'DESCRIPTOR': _PEERCONNECTIONINFO, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(PeerConnectionInfo)
+Session = _reflection.GeneratedProtocolMessageType('Session', (_message.Message,), {'DESCRIPTOR': _SESSION, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(Session)
+GetSessionsRequest = _reflection.GeneratedProtocolMessageType('GetSessionsRequest', (_message.Message,), {'DESCRIPTOR': _GETSESSIONSREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetSessionsRequest)
+GetSessionsResponse = _reflection.GeneratedProtocolMessageType('GetSessionsResponse', (_message.Message,), {'DESCRIPTOR': _GETSESSIONSRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetSessionsResponse)
+DiscoveryQuery = _reflection.GeneratedProtocolMessageType('DiscoveryQuery', (_message.Message,), {'DESCRIPTOR': _DISCOVERYQUERY, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(DiscoveryQuery)
+Discovery = _reflection.GeneratedProtocolMessageType('Discovery', (_message.Message,), {'DESCRIPTOR': _DISCOVERY, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(Discovery)
+DiscoverComponentsRequest = _reflection.GeneratedProtocolMessageType('DiscoverComponentsRequest', (_message.Message,), {'DESCRIPTOR': _DISCOVERCOMPONENTSREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(DiscoverComponentsRequest)
+DiscoverComponentsResponse = _reflection.GeneratedProtocolMessageType('DiscoverComponentsResponse', (_message.Message,), {'DESCRIPTOR': _DISCOVERCOMPONENTSRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(DiscoverComponentsResponse)
+Status = _reflection.GeneratedProtocolMessageType('Status', (_message.Message,), {'DESCRIPTOR': _STATUS, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(Status)
+GetStatusRequest = _reflection.GeneratedProtocolMessageType('GetStatusRequest', (_message.Message,), {'DESCRIPTOR': _GETSTATUSREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetStatusRequest)
+GetStatusResponse = _reflection.GeneratedProtocolMessageType('GetStatusResponse', (_message.Message,), {'DESCRIPTOR': _GETSTATUSRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(GetStatusResponse)
+StreamStatusRequest = _reflection.GeneratedProtocolMessageType('StreamStatusRequest', (_message.Message,), {'DESCRIPTOR': _STREAMSTATUSREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StreamStatusRequest)
+StreamStatusResponse = _reflection.GeneratedProtocolMessageType('StreamStatusResponse', (_message.Message,), {'DESCRIPTOR': _STREAMSTATUSRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StreamStatusResponse)
+StopExtraParameters = _reflection.GeneratedProtocolMessageType('StopExtraParameters', (_message.Message,), {'DESCRIPTOR': _STOPEXTRAPARAMETERS, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StopExtraParameters)
+StopAllRequest = _reflection.GeneratedProtocolMessageType('StopAllRequest', (_message.Message,), {'DESCRIPTOR': _STOPALLREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StopAllRequest)
+StopAllResponse = _reflection.GeneratedProtocolMessageType('StopAllResponse', (_message.Message,), {'DESCRIPTOR': _STOPALLRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StopAllResponse)
+StartSessionRequest = _reflection.GeneratedProtocolMessageType('StartSessionRequest', (_message.Message,), {'DESCRIPTOR': _STARTSESSIONREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StartSessionRequest)
+StartSessionResponse = _reflection.GeneratedProtocolMessageType('StartSessionResponse', (_message.Message,), {'DESCRIPTOR': _STARTSESSIONRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(StartSessionResponse)
+SendSessionHeartbeatRequest = _reflection.GeneratedProtocolMessageType('SendSessionHeartbeatRequest', (_message.Message,), {'DESCRIPTOR': _SENDSESSIONHEARTBEATREQUEST, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(SendSessionHeartbeatRequest)
+SendSessionHeartbeatResponse = _reflection.GeneratedProtocolMessageType('SendSessionHeartbeatResponse', (_message.Message,), {'DESCRIPTOR': _SENDSESSIONHEARTBEATRESPONSE, '__module__': 'robot.v1.robot_pb2'})
+_sym_db.RegisterMessage(SendSessionHeartbeatResponse)
+_ROBOTSERVICE = DESCRIPTOR.services_by_name['RobotService']
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
     DESCRIPTOR._serialized_options = b'\n\x11com.viam.robot.v1Z\x18go.viam.com/api/robot/v1'
